@@ -21,3 +21,7 @@
   .search-form{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr)}
   .search-tabs button{padding-inline:8px}
 }
+@media(min-width:769px){
+  .header-end,.menu-popover{display:none}
+  .header-actions{margin-left:auto}
+}

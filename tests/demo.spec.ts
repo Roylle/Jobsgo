@@ -34,6 +34,7 @@ test('filters the job list to Hà Nội through the location selector', async ({
 });
 
 test('bookmark state survives reload and can be removed', async ({ page }) => {
+  await page.setViewportSize({ width: 391, height: 847 });
   const save = page.getByRole('button', { name: 'Lưu việc làm Frontend Developer (ReactJS)', exact: true });
   await expect(save).toHaveAttribute('aria-pressed', 'false');
   await save.click();
@@ -133,11 +134,12 @@ test('hero search stays separated from its introductory text across screen sizes
 });
 
 test('hero badges and search labels remain clear through responsive breakpoints', async ({ page }) => {
-  for (const width of [320, 391, 769, 820, 880, 901, 930, 939, 1440]) {
+  for (const width of [320, 391, 769, 820, 880, 901, 930, 939, 1309, 1440]) {
     await page.setViewportSize({ width, height: 847 });
     await page.evaluate(() => document.fonts.ready);
     const issues = await page.evaluate(() => {
       const errors: string[] = [];
+      if (innerWidth > 768 && document.querySelector('.menu-button')!.getClientRects().length) errors.push('Desktop menu should be hidden');
       for (const intro of document.querySelectorAll('.hero-copy h1, .hero-copy p')) {
         const range = document.createRange();
         range.selectNodeContents(intro);
