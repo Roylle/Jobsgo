@@ -52,7 +52,7 @@ export function Hero({ onSearch, onAction }: { onSearch: (query: string, locatio
       <div className="hero-search-area">
         <div className="search-tabs" role="tablist" aria-label="Loại tìm kiếm">{['Tìm việc', 'Tên công ty', 'Tìm kỹ năng'].map((text, i) => <button key={text} role="tab" aria-selected={tab === i} className={tab === i ? 'active' : ''} onClick={() => setTab(i)}>{text}</button>)}</div>
         <form className="search-form" onSubmit={submit}>
-          <label className="query-input"><img src={asset('2cf4c.svg')} alt="" /><input aria-label={['Tìm vị trí, kỹ năng hoặc công ty', 'Tìm tên công ty', 'Tìm kỹ năng'][tab]} placeholder={['Bạn muốn tìm vị trí, kỹ năng hoặc công ty nào?', 'Nhập tên công ty bạn muốn tìm', 'Nhập kỹ năng bạn muốn tìm'][tab]} value={query} onChange={e => setQuery(e.target.value)} /></label>
+          <label className="query-input"><img src={asset('2cf4c.svg')} alt="" /><input aria-label={['Tìm vị trí, kỹ năng hoặc công ty', 'Tìm tên công ty', 'Tìm kỹ năng'][tab]} placeholder={['Vị trí, kỹ năng hoặc công ty', 'Nhập tên công ty bạn muốn tìm', 'Nhập kỹ năng bạn muốn tìm'][tab]} value={query} onChange={e => setQuery(e.target.value)} /></label>
           <label className="location-input"><img src={asset('73b41.svg')} alt="" /><select aria-label="Địa điểm làm việc" value={location} onChange={e => setLocation(e.target.value)}><option value="">Tất cả địa điểm</option><option>Hà Nội</option><option>TP. HCM</option><option>Bắc Ninh</option><option>Remote</option></select></label>
           <button className="search-submit" type="submit"><img src={asset('a0820.svg')} alt="" />Tìm kiếm</button>
         </form>

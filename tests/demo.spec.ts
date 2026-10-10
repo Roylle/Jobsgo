@@ -132,6 +132,42 @@ test('hero search stays separated from its introductory text across screen sizes
   }
 });
 
+test('hero badges and search labels remain clear through responsive breakpoints', async ({ page }) => {
+  for (const width of [320, 391, 769, 820, 880, 901, 930, 939, 1440]) {
+    await page.setViewportSize({ width, height: 847 });
+    await page.evaluate(() => document.fonts.ready);
+    const issues = await page.evaluate(() => {
+      const errors: string[] = [];
+      for (const intro of document.querySelectorAll('.hero-copy h1, .hero-copy p')) {
+        const range = document.createRange();
+        range.selectNodeContents(intro);
+        for (const text of Array.from(range.getClientRects()).filter((rect) => rect.width > 1)) {
+          for (const badge of document.querySelectorAll('.hero-art .floating-card')) {
+            const box = badge.getBoundingClientRect();
+            if (Math.min(text.right, box.right) - Math.max(text.left, box.left) > 1
+              && Math.min(text.bottom, box.bottom) - Math.max(text.top, box.top) > 1) errors.push(`Badge overlaps intro: ${badge.textContent}`);
+          }
+        }
+      }
+      const context = document.createElement('canvas').getContext('2d')!;
+      const select = document.querySelector<HTMLSelectElement>('.location-input select')!;
+      context.font = getComputedStyle(select).font;
+      if (context.measureText(select.selectedOptions[0].text).width + 18 > select.clientWidth) errors.push('Location label clipped by native arrow');
+      const input = document.querySelector<HTMLInputElement>('.query-input input')!;
+      context.font = getComputedStyle(input).font;
+      if (context.measureText(input.placeholder).width > input.clientWidth) errors.push('Search placeholder clipped');
+      for (const button of document.querySelectorAll('.login-button, .register-button, .search-tabs button')) {
+        if (!button.getClientRects().length) continue;
+        const range = document.createRange();
+        range.selectNodeContents(button);
+        if (new Set(Array.from(range.getClientRects()).map((rect) => Math.round(rect.top))).size > 1) errors.push(`Control label wraps: ${button.textContent}`);
+      }
+      return errors;
+    });
+    expect(issues, `hero readability at ${width}px`).toEqual([]);
+  }
+});
+
 test('job text stays readable inside its cards on desktop and mobile', async ({ page }) => {
   for (const width of [320, 391, 939, 1440]) {
     await page.setViewportSize({ width, height: 847 });
@@ -147,6 +183,93 @@ test('job text stays readable inside its cards on desktop and mobile', async ({ 
       });
     }));
     expect(issues, `job text clipping at ${width}px`).toEqual([]);
+  }
+});
+
+test('career tool and recruiter icons leave room for their labels', async ({ page }) => {
+  for (const width of [320, 391, 939, 1440]) {
+    await page.setViewportSize({ width, height: 847 });
+    await page.evaluate(() => document.fonts.ready);
+    const issues = await page.evaluate(() => {
+      const errors: string[] = [];
+      const check = (cardSelector: string, iconSelector: string, labelSelector: string) => {
+        for (const card of document.querySelectorAll<HTMLElement>(cardSelector)) {
+          if (!card.getClientRects().length) continue;
+          const label = card.querySelector<HTMLElement>(labelSelector)!;
+          const bounds = card.getBoundingClientRect();
+          const text = label.getBoundingClientRect();
+          if (text.left < bounds.left || text.right > bounds.right || text.bottom > bounds.bottom || label.scrollWidth > label.clientWidth + 1) {
+            errors.push(`Label outside card: ${label.textContent}`);
+          }
+          for (const icon of card.querySelectorAll(iconSelector)) {
+            const art = icon.getBoundingClientRect();
+            const xGap = Math.max(text.left - art.right, art.left - text.right);
+            const yGap = Math.max(text.top - art.bottom, art.top - text.bottom);
+            if (Math.max(xGap, yGap) < 3) errors.push(`Icon touches label: ${label.textContent}`);
+          }
+        }
+      };
+      check('.observatory-link', '.observatory-icon img', ':scope > span:nth-child(2)');
+      check('.lower-recruiter-stat', '.lower-recruiter-stat-icon img', ':scope > span:last-child');
+      const people = document.querySelector('.lower-recruiter-people')!.getBoundingClientRect();
+      const overlapsPeople = (rect: DOMRect) => Math.min(rect.right, people.right) - Math.max(rect.left, people.left) > 1
+        && Math.min(rect.bottom, people.bottom) - Math.max(rect.top, people.top) > 1;
+      for (const text of document.querySelectorAll('.lower-recruiter-copy h2, .lower-recruiter-copy p')) {
+        const range = document.createRange();
+        range.selectNodeContents(text);
+        if (Array.from(range.getClientRects()).some(overlapsPeople)) errors.push(`Recruiter photo overlaps: ${text.textContent}`);
+      }
+      for (const button of document.querySelectorAll('.lower-recruiter-actions button')) {
+        if (overlapsPeople(button.getBoundingClientRect())) errors.push(`Recruiter photo overlaps: ${button.textContent}`);
+      }
+      return errors;
+    });
+    expect(issues, `icon/label spacing at ${width}px`).toEqual([]);
+  }
+});
+
+test('mobile employer and internship content is centered in its cards', async ({ page }) => {
+  for (const width of [320, 391]) {
+    await page.setViewportSize({ width, height: 847 });
+    await page.evaluate(() => document.fonts.ready);
+    const issues = await page.evaluate(() => {
+      const errors: string[] = [];
+      for (const card of document.querySelectorAll('#employers .jg-employer, #internships .jg-intern-card')) {
+        const box = card.getBoundingClientRect();
+        const center = (box.left + box.right) / 2;
+        const selectors = card.matches('.jg-employer') ? ['.jg-featured-logo', ':scope > strong'] : ['.jg-logo', '.jg-job-title'];
+        for (const selector of selectors) {
+          const content = card.querySelector(selector)!;
+          const rect = content.getBoundingClientRect();
+          if (Math.abs((rect.left + rect.right) / 2 - center) > 1) errors.push(`Off-center: ${card.textContent}`);
+        }
+      }
+      return errors;
+    });
+    expect(issues, `card alignment at ${width}px`).toEqual([]);
+  }
+});
+
+test('industry labels fit with padding and counts share the same row baseline', async ({ page }) => {
+  for (const width of [320, 391, 939, 1271, 1440]) {
+    await page.setViewportSize({ width, height: 847 });
+    await page.evaluate(() => document.fonts.ready);
+    const issues = await page.locator('.jg-industry').evaluateAll((cards) => {
+      const errors: string[] = [];
+      const rowBaselines = new Map<number, number>();
+      for (const card of cards) {
+        const box = card.getBoundingClientRect();
+        const label = card.querySelector('strong')!.getBoundingClientRect();
+        const count = card.querySelector('span')!.getBoundingClientRect();
+        if (label.left - box.left < 8 || box.right - label.right < 8 || count.bottom > box.bottom - 8) errors.push(`Industry content too close to edge: ${card.textContent}`);
+        const row = Math.round(box.top);
+        const baseline = rowBaselines.get(row);
+        if (baseline !== undefined && Math.abs(count.bottom - baseline) > 1) errors.push(`Industry count misaligned: ${card.textContent}`);
+        rowBaselines.set(row, count.bottom);
+      }
+      return errors;
+    });
+    expect(issues, `industry spacing at ${width}px`).toEqual([]);
   }
 });
 

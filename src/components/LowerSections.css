@@ -25,7 +25,7 @@
 .lower-tool-icon-chat { background: #e4edffe6; }
 .lower-tool-description { display: flex; flex-direction: column; gap: 7.956px; }
 .lower-tool-description > strong { color: #213963; font-size: 16px; font-weight: 700; line-height: 20px; white-space: nowrap; }
-.lower-tool-description > span { font-size: 14px; line-height: 18px; color: #526d96; }
+.lower-tool-description > span { font-size: 14px; line-height: 18px; color: #526d96; text-wrap: pretty; }
 .lower-tool-description > span > span { display: block; }
 .lower-card-arrow { position: absolute; width: 27.845px; height: 27.845px; right: 8.65px; bottom: 6.67px; }
 .lower-card-arrow > .lower-svg { position: absolute; inset: 0; }
@@ -178,8 +178,10 @@
   .lower-tool-description > span > span + span::before { content: none; }
   .lower-tool-description > strong { white-space: nowrap; }
   .lower-recruiter-banner { min-height: 330px; }
-  .lower-recruiter-copy { padding: 32px; }
+  .lower-recruiter-copy { width: calc(100% - 350px); padding: 32px 0 123px 32px; }
   .lower-recruiter-copy p { max-width: 430px; }
+  .lower-recruiter-actions { flex-wrap: wrap; row-gap: 12px; }
+  .lower-recruiter-actions button { max-width: 100%; }
   .lower-recruiter-statistics { top: auto; bottom: 24px; right: 24px; flex-direction: row; gap: 12px; }
   .lower-recruiter-people { left: auto; right: 16px; top: 0; }
   .lower-recruiter-illumination { left: 42%; }
@@ -226,18 +228,21 @@
   .lower-article-copy strong > span { display: inline; }
   .lower-article-copy strong > span + span::before { content: ' '; }
   .lower-article-date { font-size: 11px; line-height: 15px; }
-  .lower-recruiter-banner { min-height: 450px; overflow: hidden; }
-  .lower-recruiter-copy { padding: 26px 20px; }
+  .lower-recruiter-banner { display: grid; grid-template-columns: minmax(0, 1fr); justify-items: center; min-height: 450px; overflow: hidden; }
+  .lower-recruiter-copy { width: 100%; min-width: 0; padding: 26px 20px; }
   .lower-recruiter-copy h2 { font-size: 26px; line-height: 32px; }
   .lower-recruiter-copy p { margin-top: 12px; font-size: 14px; line-height: 20px; max-width: none; }
-  .lower-recruiter-actions { gap: 10px; margin: 22px 0 0; }
+  .lower-recruiter-actions { flex-wrap: nowrap; gap: 10px; margin: 22px 0 0; }
   .lower-recruiter-actions button { width: auto; flex: 1; height: 48px; font-size: 13px; }
-  .lower-recruiter-people { right: 50%; margin-right: -130px; top: 208px; width: 260px; height: 204px; }
-  .lower-recruiter-statistics { bottom: 16px; left: 12px; right: 12px; gap: 10px; }
-  .lower-recruiter-stat { flex: 1; width: auto; height: 60px; padding-left: 12px; gap: 8px; }
-  .lower-recruiter-stat strong { font-size: 17px; line-height: 20px; }
-  .lower-recruiter-stat > span:last-child > span { font-size: 8px; line-height: 11px; white-space: normal; }
-  .lower-recruiter-stat-icon { width: 28px; height: 28px; transform: scale(.78); transform-origin: left center; margin-right: -6px; }
+  .lower-recruiter-people { position: relative; left: auto; right: auto; top: auto; margin: 2px auto 0; width: 260px; height: 204px; }
+  .lower-recruiter-statistics { position: relative; top: auto; bottom: auto; left: auto; right: auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: calc(100% - 24px); gap: 10px; margin: -38px 0 16px; }
+  .lower-recruiter-stat { display: grid; grid-template-columns: 39px minmax(0, 1fr); width: auto; min-width: 0; min-height: 72px; height: auto; padding: 10px 5px; gap: 6px; }
+  .lower-recruiter-stat strong { font-size: clamp(16px, 4.35vw, 17px); line-height: 22px; white-space: nowrap; }
+  .lower-recruiter-stat > span:last-child { min-width: 0; white-space: normal; }
+  .lower-recruiter-stat > span:last-child > span { font-size: 10px; line-height: 13px; white-space: normal; }
+  .lower-recruiter-stat-icon { width: 39px; height: 39px; transform: none; margin-right: 0; }
+  .lower-recruiter-stat-icon > .lower-svg:first-child { left: 0; top: 0; transform: scale(.78); transform-origin: top left; }
+  .lower-recruiter-stat-icon > .lower-svg:last-child { inset: auto; left: 5.46px; top: 5.46px; transform: scale(.78); transform-origin: top left; }
   .lower-press-stage > p { padding-inline: 24px; font-size: 12px; line-height: 17px; }
   .lower-press-logos { padding: 14px 20px 18px; gap: 18px 20px; }
   .lower-press-logos > * { transform: scale(.75); transform-origin: center; margin-inline: -10px; }

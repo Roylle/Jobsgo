@@ -92,6 +92,10 @@
 .jg-employer:hover { border-color: #87bfff; box-shadow: 0 8px 20px -3px rgba(23,69,140,.12); }
 .jg-featured-logo { width: 88.61px; height: 91.293px; flex-basis: 91.293px; }
 .jg-employer > strong { font-size: 13px; line-height: 17px; font-weight: 700; color: #476491; white-space: nowrap; }
+.jg-employers .jg-employer { justify-content: center; padding: 10px 0; }
+.jg-employers .jg-featured-logo { width: 88.61px; height: 91.293px; flex: 0 0 91.293px; transform: none; }
+.jg-employers .jg-featured-logo > img[src$="182-4290-d1992.svg"] { transform: translate(1.5px,1px); }
+.jg-employers .jg-acb-mark-featured { flex-shrink: 0; transform: translateY(2.6px); }
 .jg-internships { min-height: 354.03px; padding-bottom: 41.77px; }
 .jg-intern-plane { display: block; position: absolute; left: 34.25%; top: 30px; pointer-events: none; }
 .jg-internships .jg-inner { position: relative; }
@@ -105,12 +109,13 @@
 .jg-intern-card .jg-tags span { background: #eef5ff; padding: 4.43px 13px; }
 .jg-industries { min-height: 401.77px; padding-bottom: 53.7px; }
 .jg-industries .jg-section-heading p { margin-top: 7.77px; }
-.jg-industry-grid { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: 11.934px 18.895px; margin-top: 11.82px; }
-.jg-industry { display: flex; flex-direction: column; align-items: center; gap: 9.945px; height: 131.27px; padding: 19.89px 4px 8px; border: 3.978px solid white; border-radius: 11.934px; background: linear-gradient(143deg,rgba(var(--industry-color),.93) 14%,rgba(var(--industry-color),.68) 60%,rgba(255,255,255,.75) 86%); box-shadow: inset 0 1px 2px rgba(255,255,255,.8); transition: transform .2s,box-shadow .2s; }
+.jg-industry-grid { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); grid-auto-rows: 1fr; gap: 11.934px 18.895px; margin-top: 11.82px; }
+.jg-industry { display: flex; flex-direction: column; align-items: center; gap: 9.945px; min-height: 131.27px; height: auto; padding: 19.89px 8px 8px; border: 3.978px solid white; border-radius: 11.934px; background: linear-gradient(143deg,rgba(var(--industry-color),.93) 14%,rgba(var(--industry-color),.68) 60%,rgba(255,255,255,.75) 86%); box-shadow: inset 0 1px 2px rgba(255,255,255,.8); transition: transform .2s,box-shadow .2s; }
 .jg-industry:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(23,69,140,.08); }
 .jg-industry > img { display: block; flex: none; filter: drop-shadow(0 2px 2.5px rgba(0,170,219,.2)); }
-.jg-industry > strong { color: #223d6b; font-size: 14px; line-height: 18px; font-weight: 700; white-space: nowrap; }
-.jg-industry > span { color: #6980a3; font-size: 13px; line-height: 17px; font-weight: 400; }
+.jg-industry > strong { color: #223d6b; font-size: 14px; line-height: 18px; font-weight: 700; max-width: 100%; text-align: center; text-wrap: balance; }
+.jg-industry > span { color: #6980a3; font-size: 13px; line-height: 17px; font-weight: 400; margin-top: auto; }
+.jg-industries .jg-section-heading h2,.jg-industries .jg-section-heading p { text-wrap: balance; }
 .jg-empty { grid-column: 1 / -1; padding: 36px 20px; text-align: center; border: 1px dashed #c6daf5; border-radius: 12px; background: rgba(255,255,255,.6); color: #536d99; }
 .jg-empty p { margin: 0 0 12px; font-size: 16px; }
 .jg-empty button { color: #153de1; font-size: 14px; font-weight: 700; text-decoration: underline; padding: 6px 12px; }
@@ -199,8 +204,13 @@
   .jg-employer-grid { grid-template-columns: repeat(2,minmax(0,1fr)); margin-top: 16px; gap: 10px; }
   .jg-internships { min-height: initial; padding: 12px 0 30px; }
   .jg-intern-grid { grid-template-columns: minmax(0,1fr); padding: 0; gap: 10px; }
-  .jg-intern-card { min-height: 158px; height: auto; }
-  .jg-intern-card .jg-job-info { gap: 4px; }
+  .jg-internships .jg-intern-card { min-height: 158px; height: auto; flex-direction: column; align-items: center; gap: 12px; padding: 18px 20px; }
+  .jg-internships .jg-intern-card .jg-logo { flex: none; }
+  .jg-internships .jg-intern-card .jg-job-info { flex: none; width: 100%; align-items: center; gap: 4px; text-align: center; }
+  .jg-internships .jg-intern-card .jg-company-row { justify-content: center; padding-right: 0; }
+  .jg-internships .jg-intern-card h3 { width: 100%; display: flex; justify-content: center; }
+  .jg-internships .jg-intern-card .jg-job-title { text-align: center; }
+  .jg-internships .jg-intern-card .jg-tags { justify-content: center; }
   .jg-intern-plane { left: 30%; top: 0; }
   .jg-industries { padding-bottom: 30px; }
   .jg-industry-grid { grid-template-columns: repeat(2,minmax(0,1fr)); margin-top: 16px; gap: 10px; }

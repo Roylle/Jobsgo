@@ -34,7 +34,7 @@ const careerTools = [
 export function CareerTools({ onAction }: { onAction: (action: string) => void }) {
   const { ref, scale } = useScale(1292);
   const section='387-12793';
-  const toolButtons = (mobile: boolean) => careerTools.map(t => <button key={t.title} className="observatory-link" onClick={() => onAction(t.title)} style={mobile ? undefined : {left:t.left,top:t.top}}><span className="observatory-icon"><img src={assetPath(section,t.file)} alt="" style={{left:t.x,top:t.y,width:t.size,height:t.size}} /></span><span>{t.text}</span><img src={assetPath(section,'71d9c.svg')} alt="" /></button>);
+  const toolButtons = (mobile: boolean) => careerTools.map(t => <button key={t.title} className="observatory-link" onClick={() => onAction(t.title)} style={mobile ? undefined : {left:t.left,top:t.top}}><span className="observatory-icon"><img src={assetPath(section,t.file)} alt="" style={mobile ? undefined : {left:t.x,top:t.y,width:t.size,height:t.size}} /></span><span className="observatory-label">{t.text}</span><span className="observatory-arrow"><img src={assetPath(section,'71d9c.svg')} alt="" /></span></button>);
   return <section className="career-tools" id="career-tools" data-node-id="387:12793"><div className="root-container observatory-panel" ref={ref}>
     <div className="observatory-canvas" style={{transform:`scale(${scale})`}}>
       <DesignImage section={section} file="8d93d.svg" x={-176} y={-71} width={950} height={580} />
