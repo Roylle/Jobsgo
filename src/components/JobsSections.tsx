@@ -82,7 +82,7 @@ function JobCard({ job, internship = false, onOpenJob }: { job: Job; internship?
   return <article className={`jg-job-card ${internship ? 'jg-intern-card' : ''}`}>
     <EmployerLogo name={job.logo} />
     <div className="jg-job-info">
-      <p className="jg-company">{job.company}</p>
+      <div className="jg-company-row"><p className="jg-company">{job.company}</p>{job.hot && <span className="jg-hot">Hot</span>}</div>
       <h3><button type="button" className="jg-job-title" onClick={() => onOpenJob(job)}>{job.title}</button></h3>
       <p className="jg-job-meta">{job.salary}{!internship && ` · ${job.location}`}</p>
       {internship && <p className="jg-job-meta">{job.location}</p>}

@@ -119,6 +119,37 @@ test('mobile 390px search is usable without horizontal page scrolling', async ({
   expect(size.page).toBeLessThanOrEqual(size.viewport);
 });
 
+test('hero search stays separated from its introductory text across screen sizes', async ({ page }) => {
+  for (const width of [320, 391, 939, 1101, 1440]) {
+    await page.setViewportSize({ width, height: 847 });
+    await page.evaluate(() => document.fonts.ready);
+    const gap = await page.evaluate(() => {
+      const intro = document.querySelector('.hero-copy p')!.getBoundingClientRect();
+      const tabs = document.querySelector('.search-tabs')!.getBoundingClientRect();
+      return tabs.top - intro.bottom;
+    });
+    expect(gap, `intro/search spacing at ${width}px`).toBeGreaterThanOrEqual(16);
+  }
+});
+
+test('job text stays readable inside its cards on desktop and mobile', async ({ page }) => {
+  for (const width of [320, 391, 939, 1440]) {
+    await page.setViewportSize({ width, height: 847 });
+    await page.evaluate(() => document.fonts.ready);
+    const issues = await page.locator('.jg-job-card').evaluateAll((cards) => cards.flatMap((card) => {
+      const bounds = card.getBoundingClientRect();
+      const title = card.querySelector('.jg-job-title')!.textContent;
+      return Array.from(card.querySelectorAll<HTMLElement>('.jg-company, .jg-hot, .jg-job-title, .jg-job-meta, .jg-tags span')).flatMap((text) => {
+        const rect = text.getBoundingClientRect();
+        const clipped = text.scrollWidth > text.clientWidth + 1 || text.scrollHeight > text.clientHeight + 1;
+        const outside = rect.left < bounds.left - 1 || rect.right > bounds.right + 1 || rect.bottom > bounds.bottom + 1;
+        return clipped || outside ? [`${title}: ${text.textContent}`] : [];
+      });
+    }));
+    expect(issues, `job text clipping at ${width}px`).toEqual([]);
+  }
+});
+
 for (const width of [1440, 900, 320]) {
   test(`all sections and local assets render at ${width}px without horizontal page overflow`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });

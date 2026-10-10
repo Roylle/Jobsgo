@@ -8,18 +8,19 @@ export type Job = {
   tags: string[];
   logo: string;
   match?: number;
+  hot?: boolean;
 };
 
 export const urgentJobs: Job[] = [
-  { id: 'fpt-frontend', company: 'FPT Software', title: 'Frontend Developer (ReactJS)', salary: '15 - 30 triệu', location: 'Hà Nội / Hybrid', category: 'IT - Phần mềm', tags: ['React', 'TypeScript', 'Senior'], logo: 'fpt' },
+  { id: 'fpt-frontend', company: 'FPT Software', title: 'Frontend Developer (ReactJS)', salary: '15 - 30 triệu', location: 'Hà Nội / Hybrid', category: 'IT - Phần mềm', tags: ['React', 'TypeScript', 'Senior'], logo: 'fpt', hot: true },
   { id: 'vcb-business', company: 'Vietcombank', title: 'Chuyên viên Khách hàng Doanh nghiệp', salary: '20 - 35 triệu', location: 'Hà Nội', category: 'Kế toán - Tài chính', tags: ['Tài chính', 'Kinh doanh', 'Banking'], logo: 'vietcombank' },
   { id: 'shopee-product', company: 'Shopee', title: 'Product Manager', salary: '30 - 50 triệu', location: 'TP. HCM · Hybrid', category: 'Khác', tags: ['Product', 'Strategy', 'English'], logo: 'shopee' },
   { id: 'vingroup-hr', company: 'Vingroup', title: 'Chuyên viên Tuyển dụng', salary: '15 - 25 triệu', location: 'Hà Nội', category: 'Nhân sự', tags: ['HR', 'Talent Acquisition', 'Office'], logo: 'vingroup' },
-  { id: 'tiki-marketing', company: 'Tiki', title: 'Digital Marketing Specialist', salary: '12 - 20 triệu', location: 'TP. HCM · Hybrid', category: 'Marketing', tags: ['Marketing', 'Ads', 'Growth'], logo: 'tiki' },
+  { id: 'tiki-marketing', company: 'Tiki', title: 'Digital Marketing Specialist', salary: '12 - 20 triệu', location: 'TP. HCM · Hybrid', category: 'Marketing', tags: ['Marketing', 'Ads', 'Growth'], logo: 'tiki', hot: true },
   { id: 'acb-data', company: 'ACB', title: 'Chuyên viên Phân tích dữ liệu', salary: '20 - 40 triệu', location: 'TP. HCM', category: 'IT - Phần mềm', tags: ['Data', 'SQL', 'Power BI'], logo: 'acb' },
   { id: 'samsung-engineer', company: 'Samsung', title: 'Kỹ sư Cơ điện tử', salary: '18 - 32 triệu', location: 'Bắc Ninh', category: 'Sản xuất', tags: ['Engineering', 'Manufacturing', 'Kỹ thuật'], logo: 'samsung' },
   { id: 'masan-sales', company: 'Masan', title: 'Nhân viên Kinh doanh Thị trường', salary: '10 - 18 triệu', location: 'Toàn quốc', category: 'Kinh doanh', tags: ['Sales', 'FMCG', 'Thị trường'], logo: 'masan' },
-  { id: 'gamigo-game', company: 'Gamigo', title: 'Game Server Developer', salary: '25 - 45 triệu', location: 'TP. HCM · Hybrid', category: 'IT - Phần mềm', tags: ['Go', 'Linux', 'Game'], logo: 'gamigo' },
+  { id: 'gamigo-game', company: 'Gamigo', title: 'Game Server Developer', salary: '25 - 45 triệu', location: 'TP. HCM · Hybrid', category: 'IT - Phần mềm', tags: ['Go', 'Linux', 'Game'], logo: 'gamigo', hot: true },
 ];
 
 export const recommendedJobs: Job[] = [

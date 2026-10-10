@@ -30,7 +30,7 @@ export function Hero({ onSearch, onAction }: { onSearch: (query: string, locatio
       <a className="brand-link" href="#" aria-label="JobsGO trang chủ"><Brand /></a>
       <nav className="desktop-nav" aria-label="Điều hướng chính">{links.map(([text, href]) => <a key={text} href={href}>{text}</a>)}</nav>
       <div className="header-actions"><button className="notification" onClick={() => onAction('Thông báo')} aria-label="Thông báo"><img src={asset('49a9b.svg')} alt="" /><img className="notification-dot" src={asset('8a5eb.svg')} alt="" /></button><button className="login-button" onClick={() => onAction('Đăng nhập')}>Đăng nhập</button><button className="register-button" onClick={() => onAction('Đăng ký')}>Đăng ký</button></div>
-      <div className="header-end"><img src={asset('abc03.svg')} alt="" /><button className="menu-button" aria-label="Mở menu" aria-expanded={menu} onClick={() => setMenu(!menu)}>☰</button></div>
+      <div className="header-end"><button className="menu-button" aria-label="Mở menu" aria-expanded={menu} onClick={() => setMenu(!menu)}>☰</button></div>
       {menu && <nav className="menu-popover" aria-label="Menu">{links.map(([text, href]) => <a key={text} href={href} onClick={() => setMenu(false)}>{text}</a>)}<button onClick={() => { onAction('Việc làm đã lưu'); setMenu(false); }}>Việc làm đã lưu</button></nav>}
     </div></header>
     <div className="hero-canvas">
