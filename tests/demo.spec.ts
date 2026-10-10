@@ -190,6 +190,8 @@ test('career tool and recruiter icons leave room for their labels', async ({ pag
   for (const width of [320, 391, 939, 1440]) {
     await page.setViewportSize({ width, height: 847 });
     await page.evaluate(() => document.fonts.ready);
+    // Let ResizeObserver update the artwork scale before measuring its rendered bounds.
+    await page.evaluate(() => new Promise<void>((resolve) => requestAnimationFrame(() => requestAnimationFrame(() => resolve()))));
     const issues = await page.evaluate(() => {
       const errors: string[] = [];
       const check = (cardSelector: string, iconSelector: string, labelSelector: string) => {
@@ -228,8 +230,8 @@ test('career tool and recruiter icons leave room for their labels', async ({ pag
   }
 });
 
-test('mobile employer and internship content is centered in its cards', async ({ page }) => {
-  for (const width of [320, 391]) {
+test('mobile internship cards form two centered columns and employer content stays centered', async ({ page }) => {
+  for (const width of [320, 391, 600]) {
     await page.setViewportSize({ width, height: 847 });
     await page.evaluate(() => document.fonts.ready);
     const issues = await page.evaluate(() => {
@@ -244,10 +246,30 @@ test('mobile employer and internship content is centered in its cards', async ({
           if (Math.abs((rect.left + rect.right) / 2 - center) > 1) errors.push(`Off-center: ${card.textContent}`);
         }
       }
+      const interns = Array.from(document.querySelectorAll('#internships .jg-intern-card')).map((card) => card.getBoundingClientRect());
+      if (interns.length !== 4) errors.push('Expected all four internships');
+      else {
+        if (Math.abs(interns[0].top - interns[1].top) > 1 || Math.abs(interns[2].top - interns[3].top) > 1
+          || interns[1].left <= interns[0].right || interns[2].top <= interns[0].bottom) errors.push('Internships are not arranged in two columns');
+      }
       return errors;
     });
     expect(issues, `card alignment at ${width}px`).toEqual([]);
   }
+  await page.setViewportSize({ width: 391, height: 847 });
+  const internships = page.locator('#internships');
+  const save = internships.getByRole('button', { name: 'Lưu việc làm Technology Intern', exact: true });
+  await save.click();
+  await expect(internships.getByRole('button', { name: 'Bỏ lưu việc làm Technology Intern', exact: true })).toHaveAttribute('aria-pressed', 'true');
+  await internships.getByRole('button', { name: 'Technology Intern', exact: true }).click();
+  const detail = page.getByRole('dialog', { name: 'Technology Intern', exact: true });
+  await expect(detail).toBeVisible();
+  await expect(detail).toContainText('Grab');
+  await page.keyboard.press('Escape');
+  await expect(detail).not.toBeVisible();
+  await internships.getByRole('button', { name: 'Marketing', exact: true }).click();
+  await expect(internships.locator('.jg-intern-card')).toHaveCount(1);
+  await expect(internships.locator('.jg-intern-card')).toContainText('Marketing Intern');
 });
 
 test('industry labels fit with padding and counts share the same row baseline', async ({ page }) => {
