@@ -1,0 +1,24 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="952" height="96" viewBox="0 0 952 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Platform / fine cyan rim" filter="url(#filter0_d_0_29)">
+<mask id="stroke0_0_29" fill="white">
+<path d="M946 47C946 70.196 735.574 89 476 89C216.426 89 6 70.196 6 47C6 23.804 216.426 5 476 5C735.574 5 946 23.804 946 47Z"/>
+</mask>
+<path d="M946 47C946 70.196 735.574 89 476 89C216.426 89 6 70.196 6 47C6 23.804 216.426 5 476 5C735.574 5 946 23.804 946 47Z" stroke-width="3" stroke="url(#paint0_linear_0_29)" mask="url(#stroke0_0_29)"/>
+</g>
+<defs>
+<filter id="filter0_d_0_29" x="0" y="0" width="952" height="96" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="3"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.501961 0 0 0 0 0.972549 0 0 0 0 1 0 0 0 0.56 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_29"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_29" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_0_29" x1="6" y1="47" x2="946" y2="47" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.45"/>
+<stop offset="0.5" stop-color="#D7FFFF" stop-opacity="0.95"/>
+<stop offset="1" stop-color="#79E0FF" stop-opacity="0.4"/>
+</linearGradient>
+</defs>
+</svg>

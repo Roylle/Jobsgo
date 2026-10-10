@@ -1,0 +1,18 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="1292.82" height="296.354" viewBox="0 0 1292.82 296.354" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Career / foreground luminous wrap" clip-path="url(#clip0_0_118)">
+<g id="Luminous wrap 1" filter="url(#filter0_f_0_118)">
+<path d="M370 289C455 174 568 300 798 266C995 235 1110 277 1310 262" stroke-width="15" stroke="#B7F9FF" stroke-opacity="0.32"/>
+</g>
+<path id="Luminous wrap 2" d="M370 289C455 174 568 300 798 266C995 235 1110 277 1310 262" stroke-width="2.2" stroke="#ECFFFF" stroke-opacity="0.7"/>
+</g>
+<defs>
+<filter id="filter0_f_0_118" x="356.969" y="224.975" width="960.592" height="75.4828" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="3.5" result="effect1_foregroundBlur_0_118"/>
+</filter>
+<clipPath id="clip0_0_118">
+<rect width="1292.82" height="296.354" fill="white"/>
+</clipPath>
+</defs>
+</svg>

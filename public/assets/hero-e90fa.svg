@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="358.011" height="123.315" viewBox="0 0 358.011 123.315" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse id="Lower pink light" cx="179.006" cy="61.6575" rx="179.006" ry="61.6575" fill="url(#paint0_radial_0_278)"/>
+<defs>
+<radialGradient id="paint0_radial_0_278" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(179.006 61.6575) scale(179.006 61.6575)">
+<stop stop-color="#FFD8F8" stop-opacity="0.5"/>
+<stop offset="0.55" stop-color="#FFD8F8" stop-opacity="0.325"/>
+<stop offset="1" stop-color="#FFD8F8" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

@@ -1,0 +1,9 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="950" height="580" viewBox="0 0 950 580" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse id="Atmosphere / pearl diffusion" cx="475" cy="290" rx="475" ry="290" fill="url(#paint0_radial_0_34)"/>
+<defs>
+<radialGradient id="paint0_radial_0_34" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(475 290) scale(475 290)">
+<stop stop-color="white" stop-opacity="0.92"/>
+<stop offset="1" stop-color="#E5F4FF" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

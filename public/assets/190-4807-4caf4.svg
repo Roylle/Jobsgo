@@ -1,0 +1,16 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="23.7019" height="23.7019" viewBox="0 0 23.7019 23.7019" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="JobsGO app icon" clip-path="url(#clip0_0_69)">
+<path id="Vector" d="M16.7891 0.000854685L6.91335 0.000854685C3.09538 0.000854685 0.000308259 3.09593 0.000308259 6.9139L0.000308259 16.7897C0.000308259 20.6076 3.09538 23.7027 6.91335 23.7027H16.7891C20.6071 23.7027 23.7022 20.6076 23.7022 16.7897V6.9139C23.7022 3.09593 20.6071 0.000854685 16.7891 0.000854685Z" fill="url(#paint0_linear_0_69)"/>
+<path id="Vector_2" d="M7.90087 8.88726H15.8015C16.8923 8.88726 17.7766 9.77157 17.7766 10.8624V15.8003C17.7766 16.8912 16.8923 17.7755 15.8015 17.7755H7.90087C6.81002 17.7755 5.92571 16.8912 5.92571 15.8003V10.8624C5.92571 9.77157 6.81002 8.88726 7.90087 8.88726Z" stroke-width="1.38261" stroke="white"/>
+<path id="Vector_3" d="M8.88854 8.88908V5.92634H14.814V8.88908M5.92581 11.8518H10.8637M10.8637 11.8518H12.8389M10.8637 11.8518V10.8642M10.8637 11.8518V13.827H12.8389V11.8518M12.8389 11.8518H17.7767M12.8389 11.8518V10.8642" stroke-width="1.18509" stroke="white"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_69" x1="0.000308259" y1="0.000854685" x2="23.7022" y2="23.7027" gradientUnits="userSpaceOnUse">
+<stop stop-color="#AF70FA"/>
+<stop offset="1" stop-color="#6454ED"/>
+</linearGradient>
+<clipPath id="clip0_0_69">
+<rect width="23.7019" height="23.7019" fill="white"/>
+</clipPath>
+</defs>
+</svg>

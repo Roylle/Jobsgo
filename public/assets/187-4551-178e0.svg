@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="640" height="229" viewBox="0 0 640 229" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse id="Recruiter / bounded blue illumination" cx="320" cy="114.5" rx="320" ry="114.5" fill="url(#paint0_radial_0_87)"/>
+<defs>
+<radialGradient id="paint0_radial_0_87" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(320 114.5) scale(320 114.5)">
+<stop stop-color="#A297FF" stop-opacity="0.7"/>
+<stop offset="0.46" stop-color="#728CFB" stop-opacity="0.42"/>
+<stop offset="1" stop-color="#3576FD" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

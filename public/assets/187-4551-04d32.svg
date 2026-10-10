@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="250.608" height="204.862" viewBox="0 0 250.608 204.862" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse id="Cyan energy haze" cx="125.304" cy="102.431" rx="125.304" ry="102.431" fill="url(#paint0_radial_0_86)"/>
+<defs>
+<radialGradient id="paint0_radial_0_86" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(125.304 102.431) scale(125.304 102.431)">
+<stop stop-color="#18BFFF" stop-opacity="0.17"/>
+<stop offset="0.55" stop-color="#18BFFF" stop-opacity="0.068"/>
+<stop offset="1" stop-color="#18BFFF" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

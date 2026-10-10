@@ -1,0 +1,50 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Layered glass vector artwork">
+<g id="Vector" opacity="0.1">
+<use xlink:href="#stroke0_0_37" fill="#464AD3"/>
+<mask id="stroke1_0_37" fill="white">
+<use xlink:href="#stroke0_0_37"/>
+</mask>
+<path d="M58.4375 59.5C58.4375 61.8472 47.4965 63.75 34 63.75C20.5035 63.75 9.5625 61.8472 9.5625 59.5C9.5625 57.1528 20.5035 55.25 34 55.25C47.4965 55.25 58.4375 57.1528 58.4375 59.5Z" stroke-width="2" stroke="white" mask="url(#stroke1_0_37)"/>
+</g>
+<g id="Vector_2">
+<use xlink:href="#stroke2_0_37" fill="url(#paint0_linear_0_37)"/>
+<mask id="stroke3_0_37" fill="white">
+<use xlink:href="#stroke2_0_37"/>
+</mask>
+<path d="M21.25 8.5H40.375C45.6562 8.5 49.9375 12.7813 49.9375 18.0625V46.75C49.9375 52.0312 45.6562 56.3125 40.375 56.3125H21.25C15.9688 56.3125 11.6875 52.0312 11.6875 46.75V18.0625C11.6875 12.7813 15.9688 8.5 21.25 8.5Z" stroke-width="2" stroke="white" mask="url(#stroke3_0_37)"/>
+</g>
+<path id="Vector_3" d="M40.375 5.3125H21.25C15.9688 5.3125 11.6875 9.59378 11.6875 14.875V43.5625C11.6875 48.8437 15.9688 53.125 21.25 53.125H40.375C45.6562 53.125 49.9375 48.8437 49.9375 43.5625V14.875C49.9375 9.59378 45.6562 5.3125 40.375 5.3125Z" fill="url(#paint1_linear_0_37)" stroke-width="1.2" stroke="white"/>
+<path id="Vector_4" d="M39.3125 11.6875H22.3125C19.3785 11.6875 17 14.066 17 17V41.4375C17 44.3715 19.3785 46.75 22.3125 46.75H39.3125C42.2465 46.75 44.625 44.3715 44.625 41.4375V17C44.625 14.066 42.2465 11.6875 39.3125 11.6875Z" fill="url(#paint2_linear_0_37)"/>
+<path id="Vector_5" d="M23.375 19.125H38.25M23.375 26.5625H32.9375M23.375 34H30.8125" stroke-width="3" stroke-linecap="round" stroke="#6D87E4"/>
+<path id="Vector_6" d="M44.625 58.4375C53.427 58.4375 60.5625 51.302 60.5625 42.5C60.5625 33.698 53.427 26.5625 44.625 26.5625C35.823 26.5625 28.6875 33.698 28.6875 42.5C28.6875 51.302 35.823 58.4375 44.625 58.4375Z" fill="#363CAA"/>
+<path id="Vector_7" d="M44.625 55.25C53.427 55.25 60.5625 48.1145 60.5625 39.3125C60.5625 30.5105 53.427 23.375 44.625 23.375C35.823 23.375 28.6875 30.5105 28.6875 39.3125C28.6875 48.1145 35.823 55.25 44.625 55.25Z" fill="url(#paint3_linear_0_37)" stroke-width="1.2" stroke="#B5FCFF"/>
+<path id="Vector_8" d="M44.625 50.4688C50.7864 50.4688 55.7812 45.4739 55.7812 39.3125C55.7812 33.1511 50.7864 28.1562 44.625 28.1562C38.4636 28.1562 33.4688 33.1511 33.4688 39.3125C33.4688 45.4739 38.4636 50.4688 44.625 50.4688Z" fill="#1171C1"/>
+<path id="Vector_9" d="M35.5938 39.3125C35.5938 36.9173 36.5453 34.6201 38.2389 32.9264C39.9326 31.2328 42.2298 30.2812 44.625 30.2812C47.0202 30.2812 49.3174 31.2328 51.0111 32.9264C52.7047 34.6201 53.6562 36.9173 53.6562 39.3125" stroke-width="2.8" stroke-linecap="round" stroke="#BFFFFF"/>
+<path id="Vector_10" d="M39.3125 40.375L43.0312 44.0938L49.9375 37.1875" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" stroke="white"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_37" x1="15.9375" y1="15.9375" x2="52.0625" y2="62.6875" gradientUnits="userSpaceOnUse">
+<stop stop-color="#5489E6"/>
+<stop offset="1" stop-color="#3834B4"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_37" x1="13.8125" y1="7.4375" x2="54.1875" y2="60.5625" gradientUnits="userSpaceOnUse">
+<stop stop-color="#9FF4FF"/>
+<stop offset="0.36" stop-color="#469EFF"/>
+<stop offset="0.7" stop-color="#4262ED"/>
+<stop offset="1" stop-color="#713FDE"/>
+</linearGradient>
+<linearGradient id="paint2_linear_0_37" x1="18.0625" y1="12.75" x2="45.6875" y2="48.875" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F8FFFF"/>
+<stop offset="0.58" stop-color="#C1EDFF"/>
+<stop offset="1" stop-color="#859BFF"/>
+</linearGradient>
+<linearGradient id="paint3_linear_0_37" x1="36.125" y1="28.6875" x2="59.5" y2="57.375" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B6FFFF"/>
+<stop offset="0.35" stop-color="#31DDE7"/>
+<stop offset="1" stop-color="#0989BF"/>
+</linearGradient>
+<path id="stroke0_0_37" d="M34 63.75C47.4965 63.75 58.4375 61.8472 58.4375 59.5C58.4375 57.1528 47.4965 55.25 34 55.25C20.5035 55.25 9.5625 57.1528 9.5625 59.5C9.5625 61.8472 20.5035 63.75 34 63.75Z"/>
+<path id="stroke2_0_37" d="M40.375 8.5H21.25C15.9688 8.5 11.6875 12.7813 11.6875 18.0625V46.75C11.6875 52.0312 15.9688 56.3125 21.25 56.3125H40.375C45.6562 56.3125 49.9375 52.0312 49.9375 46.75V18.0625C49.9375 12.7813 45.6562 8.5 40.375 8.5Z"/>
+</defs>
+</svg>

@@ -1,0 +1,14 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="950" height="114" viewBox="0 0 950 114" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="Platform / translucent cylindrical edge" d="M0 42C0 18 213 0 475 0C737 0 950 18 950 42V72C950 96 737 114 475 114C213 114 0 96 0 72V42Z" fill="url(#paint0_linear_0_30)"/>
+<defs>
+<linearGradient id="paint0_linear_0_30" x1="0" y1="57" x2="950" y2="57" gradientUnits="userSpaceOnUse">
+<stop stop-color="#699FFF" stop-opacity="0.31"/>
+<stop offset="0.12" stop-color="#EDFBFF" stop-opacity="0.7"/>
+<stop offset="0.25" stop-color="#688FFF" stop-opacity="0.3"/>
+<stop offset="0.45" stop-color="#E1F5FF" stop-opacity="0.48"/>
+<stop offset="0.65" stop-color="#809CFF" stop-opacity="0.32"/>
+<stop offset="0.9" stop-color="#B2D6FF" stop-opacity="0.32"/>
+<stop offset="1" stop-color="#5BCFFF" stop-opacity="0.38"/>
+</linearGradient>
+</defs>
+</svg>

@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.design/
+.DS_Store
+*.local
+.env
+.env.*
+test-results/
+playwright-report/
+.playwright-mcp/
+*.tsbuildinfo

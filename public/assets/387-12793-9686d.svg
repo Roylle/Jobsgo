@@ -1,0 +1,9 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="740" height="510" viewBox="0 0 740 510" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse id="Atmosphere / cyan field" cx="370" cy="255" rx="370" ry="255" fill="url(#paint0_radial_0_33)"/>
+<defs>
+<radialGradient id="paint0_radial_0_33" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(370 255) scale(370 255)">
+<stop stop-color="#67ECFF" stop-opacity="0.5"/>
+<stop offset="1" stop-color="#86B8FF" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

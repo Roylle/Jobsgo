@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="1260" height="550" viewBox="0 0 1260 550" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse id="Soft atmospheric glow 3" cx="630" cy="275" rx="630" ry="275" fill="url(#paint0_radial_0_67)"/>
+<defs>
+<radialGradient id="paint0_radial_0_67" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(630 275) scale(630 275)">
+<stop stop-color="#91C7FF" stop-opacity="0.32"/>
+<stop offset="0.55" stop-color="#91C7FF" stop-opacity="0.1024"/>
+<stop offset="1" stop-color="#91C7FF" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

@@ -1,0 +1,18 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="790.527" height="173.649" viewBox="0 0 790.527 173.649" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Orbit / cyan sweep" filter="url(#filter0_f_0_27)">
+<path d="M1.25451 172.883C44.2545 50.8828 265.255 -5.11718 552.255 1.88282C753.255 6.88282 829.255 79.8828 769.255 159.883" stroke-width="1.6" stroke="url(#paint0_linear_0_27)"/>
+</g>
+<defs>
+<filter id="filter0_f_0_27" x="-5.96046e-08" y="0" width="790.527" height="173.649" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="0.25" result="effect1_foregroundBlur_0_27"/>
+</filter>
+<linearGradient id="paint0_linear_0_27" x1="1.25451" y1="87.0914" x2="789.227" y2="87.0914" gradientUnits="userSpaceOnUse">
+<stop stop-color="#86F6FF" stop-opacity="0.2"/>
+<stop offset="0.28" stop-color="#CCFFFF" stop-opacity="0.94"/>
+<stop offset="0.78" stop-color="#77F8FF" stop-opacity="0.88"/>
+<stop offset="1" stop-color="#ECFFFF" stop-opacity="0.2"/>
+</linearGradient>
+</defs>
+</svg>
